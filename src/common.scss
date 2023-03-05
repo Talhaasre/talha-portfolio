@@ -1,0 +1,466 @@
+@import "./common-mixins.scss";
+
+$color-ffffff: #ffffff;
+$color-EE4E56: #ee4e56;
+$color-ECECEC: #ececec;
+$color-F3F3F3: #f3f3f3;
+$color-212529: #212529;
+$color-707070: #707070;
+$color-131313: #131313;
+$color-9A9A9A: #9a9a9a;
+$color-DDDDDD: #dddddd;
+$color-FFAEB2: #ffaeb2;
+$color-626262: #626262;
+$color-048181: #048181;
+$color-FFBB05: #ffbb05;
+$color-0084C6: #0084c6;
+$color-A600B2: #a600b2;
+$color-009B8B: #009b8b;
+$color-13131366: #13131366;
+$color-222222: #222222;
+$color-1e1e1e: #1e1e1e;
+$color-A5A5A5: #a5a5a5;
+$color-1a1818: #1a1818;
+$color-1C1C1C33: #1c1c1c33;
+$color-00000029: #00000029;
+$color-A4A4A4: #a4a4a4;
+$color-F5F5F5: #f5f5f5;
+$color-00B2BA: #00b2ba;
+$color-33333366: #33333366;
+$color-1C1C1C66: #1c1c1c66;
+$color-333333: #333333;
+$color-EE2C3C: #ee2c3c;
+$container-2560: 2226px;
+$container-1920: 1620px;
+$container-1700: 1619px;
+$container-1620: 1480px;
+$container-1536: 1356px;
+$container-1440: 1200px;
+$container-1366: 1194px;
+$container-1280: 1113px;
+$container-1194: 1031px;
+$container-1080: 931px;
+$container-992: 700px;
+
+body {
+  font-family: "Poppins", sans-serif;
+  // font-family: 'Michroma', sans-serif;
+}
+img {
+  object-fit: cover;
+  height: auto;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #545353;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $color-ffffff;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+:focus {
+  outline: none;
+  outline: -webkit-focus-ring-color auto 0px;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+button:focus {
+  outline: 0px dotted;
+  outline: 0px auto -webkit-focus-ring-color;
+}
+li {
+  list-style-type: none;
+}
+[type="submit"],
+button,
+html [type="button"] {
+  appearance: none;
+  -webkit-appearance: none;
+}
+input [type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus,
+select:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: $color-131313 !important;
+}
+.form_input {
+  @include inputtextStyle;
+  &::-webkit-input-placeholder {
+    /* Edge */
+    color: $color-626262;
+  }
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $color-626262;
+  }
+  &::placeholder {
+    color: $color-626262;
+  }
+}
+.form_input:-webkit-autofill,
+.form_input:-webkit-autofill:hover,
+.form_input:-webkit-autofill:focus,
+.form_input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s;
+}
+.firstsec {
+  @include firstSec;
+}
+.heading_strip {
+  display: none;
+}
+.form_field {
+  margin-bottom: 5em;
+  .label_head {
+    @include headingStyle;
+    font-size: 2.188em;
+  }
+  .radio_flex {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 2.5em;
+    .radio_wrap {
+      width: 100%;
+      max-width: 25%;
+      display: flex;
+      align-items: center;
+      margin-right: 8em;
+      input[type="radio"] {
+        @include inputRadioStyle;
+      }
+      input:checked {
+        border: 0.5em solid $color-FFAEB2;
+        background-color: $color-EE4E56;
+        outline: unset !important; /* I added this one for Edge (chromium) support */
+      }
+
+      .radio_label {
+        cursor: pointer;
+        width: 100%;
+        max-width: 100%;
+        @include headingStyle;
+        padding: 0 0 0 0.5em;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.form_submit_btn {
+  @include ctaStyle;
+  &:hover {
+    @include hoverStyle;
+    .arrow_icon {
+      right: 3em;
+    }
+  }
+  .arrow_icon {
+    @include arrowStyle;
+  }
+}
+.common_cta {
+  @include ctaStyle;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding-left: 1.781em;
+  font-size: 1.25em;
+  height: 3.25em;
+  font-family: "Poppins", sans-serif;
+  &:focus {
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    width: 100%;
+    font-size: 1.5em;
+    height: 2.8em;
+    background-color: $color-EE4E56;
+    border: 1px solid $color-EE4E56;
+    border-radius: 11px;
+    color: $color-ffffff;
+    margin-top: 1.5em;
+    font-weight: 700;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    cursor: pointer;
+    transition: all 0.3s;
+    @include ctaStyle;
+  }
+  &:hover {
+    color: $color-ffffff;
+    text-decoration: none;
+    @include hoverStyle;
+    .arrow_icon {
+      right: 1em;
+    }
+  }
+  .arrow_icon {
+    @include arrowStyle;
+    max-width: 1.5em;
+    right: 2em;
+  }
+}
+table {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.error_message {
+  // display: none;
+  font-size: 1.125em;
+  margin-top: 1em;
+  font-weight: bold;
+  color: red;
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 2561px) {
+  body {
+    font-size: 18px;
+  }
+  .my_container {
+    max-width: $container-2560;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+@media (max-width: 2560px) {
+  body {
+    font-size: 18px;
+  }
+  .my_container {
+    max-width: $container-2560;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+@media (max-width: 1920px) {
+  body {
+    font-size: 16px;
+  }
+  .my_container {
+    max-width: $container-1920;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@media (max-width: 1700px) {
+  body {
+    font-size: 13px;
+  }
+  .my_container {
+    max-width: $container-1700;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+@media (max-width: 1620px) {
+  body {
+    font-size: 13px;
+  }
+  .my_container {
+    max-width: $container-1620;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+@media (max-width: 1536px) {
+  body {
+    font-size: 11px;
+  }
+  .my_container {
+    max-width: $container-1536;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+@media (max-width: 1440px) {
+  .my_container {
+    max-width: $container-1440;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@media (max-width: 1366px) {
+  body {
+    font-size: 10px;
+  }
+  .my_container {
+    max-width: $container-1366;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@media (max-width: 1280px) {
+  body {
+    font-size: 10px;
+  }
+  .my_container {
+    max-width: $container-1280;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 1194px) {
+  body {
+    font-size: 10px;
+  }
+  .my_container {
+    max-width: $container-1194;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+@media (max-width: 1080px) {
+  body {
+    font-size: 10px;
+  }
+  .my_container {
+    max-width: $container-1080;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+@media (max-width: 992px) {
+  body {
+    font-size: 10px;
+  }
+  .my_container {
+    max-width: $container-992;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  .firstsec {
+    padding-top: 6.8em;
+  }
+}
+
+@media (max-width: 768px) {
+  .form_field {
+    .radio_flex {
+      flex-wrap: wrap;
+      .radio_wrap {
+        width: 100%;
+        max-width: 50%;
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .my_container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  .form_input {
+    font-size: 1.6em;
+  }
+  .form_submit_btn {
+    font-size: 1.4em;
+    height: 3.5em;
+  }
+  .common_cta {
+    font-size: 1.4em;
+    height: 3.5em;
+  }
+  .form_field {
+    .radio_flex {
+      .radio_wrap {
+        margin-bottom: 17px;
+        .radio_label {
+          font-size: 1.6em;
+        }
+      }
+    }
+    .label_head {
+      font-size: 1.6em;
+      margin-bottom: 21px;
+    }
+  }
+  .sticky_booknow {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    .common_cta {
+      font-size: 1.8em;
+      background: transparent linear-gradient(90deg, #00076f 0%, #b100ff 100%)
+        0% 0% no-repeat padding-box;
+      margin: 0;
+      padding: 0;
+      height: auto;
+      text-align: center;
+      border-radius: 0;
+      height: 100%;
+      min-height: 7.5vh;
+      max-height: 7.5vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

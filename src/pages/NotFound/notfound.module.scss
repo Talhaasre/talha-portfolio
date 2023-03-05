@@ -1,0 +1,56 @@
+@import "../../common.scss";
+
+.notfound_sec1 {
+  padding: 10.688em 0 5em;
+  .flex_box {
+    padding: 2.5em 0 5em;
+    text-align: center;
+    .title {
+      @include textStyles(15em, normal, 0);
+      font-weight: bolder;
+      font-style: italic;
+    }
+    .subtitle {
+      @include textStyles(2.5em, normal, 0);
+      padding: 0 0 1em;
+      font-weight: bold;
+    }
+    .desc {
+      @include textStyles(1.5em, normal, 0);
+    }
+    .cta_wrapper {
+      a {
+        color: $color-333333;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .notfound_sec1 {
+    padding: 7.5em 0 5em;
+    .flex_box {
+      padding: 2.5em 0 5em;
+      .title {
+        @include textStyles(10em, normal, 0);
+      }
+      .subtitle {
+        @include textStyles(2.5em, normal, 0);
+      }
+      .desc {
+        @include textStyles(1.6em, normal, 0);
+        max-width: 75%;
+        margin: 0 auto;
+        padding-bottom: 1em;
+      }
+      .cta_wrapper {
+        @include textStyles(1.6em, normal, 0);
+        a {
+          color: $color-333333;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

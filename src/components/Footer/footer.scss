@@ -1,0 +1,191 @@
+@import "../../common.scss";
+
+.footer_sec1 {
+  position: relative;
+  // margin-top: 20em;
+  background: transparent linear-gradient(90deg, #00076f 0%, #b100ff 100%) 0% 0%
+    no-repeat padding-box;
+  color: $color-ffffff;
+  padding: 6.5em 0 5.938em;
+  .scroll_wrap {
+    position: absolute;
+    top: -2.3em;
+    left: 48.5%;
+    cursor: pointer;
+    .scrollup_img {
+      max-width: 4.625em;
+    }
+    .scroll_text {
+      @include textStyles(1.25em, normal, 0);
+      font-family: "Poppins", sans-serif;
+      color: $color-ffffff;
+      font-weight: 300;
+      margin-top: 0.375em;
+      margin-left: -0.6em;
+      color: $color-EE4E56;
+    }
+  }
+  .footer_main {
+    border-top: 1px solid $color-707070;
+    padding-top: 4em;
+  }
+  .logo_wrapper {
+    .footer_logo {
+      width: 100%;
+      max-width: 16.875em;
+      margin-bottom: 1.375em;
+    }
+    .description {
+      @include textStyles(1.25em, normal, 0);
+      font-family: "Poppins", sans-serif;
+      color: $color-ffffff;
+      font-weight: 300;
+      margin-bottom: 2.313em;
+      max-width: 60%;
+    }
+    .social_wrapper {
+      display: flex;
+      align-items: flex-end;
+      .social_icon {
+        width: 100%;
+        max-width: 2em;
+        height: 100%;
+        max-height: 1.875em;
+        margin-right: 2em;
+        object-fit: contain;
+      }
+    }
+  }
+  .links_wrapper {
+    .link_heading {
+      @include textStyles(1.625em, normal, 0);
+      font-family: "Poppins", sans-serif;
+      font-weight: bold;
+      margin-bottom: 1.563em;
+    }
+    .description {
+      @include textStyles(1.25em, normal, 0);
+      font-family: "Poppins", sans-serif;
+      color: $color-ffffff;
+      margin-bottom: 2.313em;
+      font-weight: 300;
+      max-width: 85%;
+      .location_icon {
+        object-fit: contain;
+        margin-top: 0.5em;
+        margin-right: 0.5em;
+        max-width: 1em;
+      }
+      a {
+        display: flex;
+        align-items: flex-start;
+        color: $color-ffffff;
+        &:hover {
+          text-decoration: none;
+          color: $color-EE4E56;
+        }
+      }
+    }
+    .link_list {
+      .link {
+        color: $color-ffffff;
+        text-decoration: none;
+        li {
+          @include textStyles(1.225em, normal, 0);
+          font-family: "Poppins", sans-serif;
+          color: $color-ffffff;
+          font-weight: 300;
+          margin-bottom: 1.25em;
+          &:hover {
+            color: $color-EE4E56;
+          }
+          .location_icon {
+            object-fit: contain;
+            margin-right: 0.5em;
+            max-width: 1em;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer_sec2 {
+  background: transparent linear-gradient(90deg, #00076f 0%, #b100ff 100%) 0% 0%
+    no-repeat padding-box;
+  color: $color-ffffff;
+  .copyright_flex {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid $color-707070;
+    padding: 1.188em 0 2.188em;
+    .copyright {
+      @include textStyles(1.25em, normal, 0);
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+      color: $color-ffffff;
+    }
+    .togglehead_link {
+      font-family: "Poppins", sans-serif;
+      color: $color-ffffff;
+      font-weight: 300;
+      text-decoration: none;
+      &:hover {
+        padding-bottom: 0.05em;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .footer_sec1 {
+    padding: 6.5em 0 2em;
+    .scroll_wrap {
+      left: 43.5%;
+    }
+    .logo_wrapper {
+      .footer_logo {
+        margin-bottom: 3em;
+      }
+      .description {
+        font-size: 1.4em;
+        max-width: 95%;
+      }
+      .social_wrapper {
+        margin-bottom: 2.313em;
+      }
+    }
+    .links_wrapper {
+      margin-bottom: 3em;
+      .description {
+        font-size: 1.4em;
+        max-width: 95%;
+        margin-bottom: 0.75em;
+      }
+      .link_heading {
+        font-size: 1.8em;
+        margin-bottom: 1em;
+      }
+      .link_list {
+        .link {
+          li {
+            font-size: 1.4em;
+            margin-bottom: 0.75em;
+          }
+        }
+      }
+    }
+  }
+  .footer_sec2 {
+    // padding-bottom: 7.5vh;
+    .copyright_flex {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 1.188em 0;
+      .copyright {
+        font-size: 1.2em;
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+}

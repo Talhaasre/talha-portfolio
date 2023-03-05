@@ -1,0 +1,106 @@
+@mixin textStyles($fontSize, $lineHeight, $letterSpacing) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  letter-spacing: $letterSpacing;
+}
+
+@mixin headingStyle {
+  font-size: 1.875em;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 800;
+  margin-bottom: 0.8em;
+}
+
+@mixin ctaStyle {
+  font-family: "Red Hat Display", sans-serif;
+  display: flex;
+  width: 100%;
+  font-size: 1.5em;
+  height: 2.8em;
+  background-color: $color-EE4E56;
+  border: 1px solid $color-EE4E56;
+  border-radius: 11px;
+  color: $color-ffffff;
+  margin-top: 1.5em;
+  font-weight: 700;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+@mixin arrowStyle {
+  position: absolute;
+  right: 5em;
+  width: 100%;
+  max-width: 2em;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transition: 0.3s;
+}
+
+@mixin hoverStyle {
+  box-shadow: 0px 10px 23px rgba($color: #000000, $alpha: 0.16);
+}
+
+@mixin firstSec {
+  padding-top: 10.688em;
+}
+
+@mixin descStyle {
+  font-size: 1.5em;
+  color: $color-212529;
+}
+
+@mixin inputStyle {
+}
+
+@mixin inputtextStyle {
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  display: block;
+  width: 100%;
+  font-size: 1.625em;
+  line-height: 1.4em;
+  padding: 0.75em 2.579em 0.75em 0;
+  background-color: transparent !important;
+  border: 0;
+  border-bottom: 1px solid $color-707070;
+  color: $color-626262;
+  font-weight: bolder;
+}
+
+@mixin inputRadioStyle {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  border-radius: 50%;
+  width: 100%;
+  min-width: 2em;
+  max-width: 2em;
+  height: 100%;
+  min-height: 2em;
+  max-height: 2em;
+
+  border: 0.5em solid $color-DDDDDD;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+  background-color: $color-9A9A9A;
+
+  position: relative;
+  top: 0.075em;
+  cursor: pointer;
+}
+
+@mixin stripStyle {
+  color: $color-ffffff;
+  background-color: $color-00B2BA;
+  text-align: center;
+  padding: 3.875em 0;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: bolder;
+}

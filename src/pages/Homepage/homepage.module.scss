@@ -1,0 +1,49 @@
+@import "../../common.scss";
+
+.home_sec1 {
+  padding: 10.688em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .text_container {
+    text-align: center;
+    padding: 5em 0 10em;
+    .heading {
+      @include textStyles(3.5em, normal, 0);
+      font-weight: bolder;
+    }
+    .description {
+      @include textStyles(2em, normal, 0);
+      max-width: 55%;
+      margin: 1em auto 0;
+    }
+  }
+  .img_wrapper {
+    width: 100%;
+    max-width: 60em;
+    margin: 0 auto;
+    .hero_img {
+      width: 100%;
+      max-width: 60em;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .home_sec1 {
+    padding: 10em 0 10em;
+    .text_container {
+      padding: 5em 0;
+      .heading {
+        font-size: 2.5em;
+        text-align: left;
+      }
+      .description {
+        font-size: 1.4em;
+        max-width: 100%;
+        text-align: left;
+      }
+    }
+  }
+}
