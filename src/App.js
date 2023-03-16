@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <MetaDecorator
-        metaTitle="Talha Asre | Frontend Developer, Consultant & Mentor"
+        metaTitle="Talha Asre | Web Developer"
         metaDesc="I develop and code pixel perfect sites & apps, and I love what I do."
         canonicalLink={window.location}
       />

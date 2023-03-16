@@ -106,24 +106,24 @@
         .flex_for_ticker {
           @include textStyles(1.5em, 1.5em, 0);
           color: $color-ffffff;
-          border-radius: 10px;
+          border-radius: 50px;
           background: transparent
             linear-gradient(90deg, #00076f 0%, #b100ff 100%) 0% 0% no-repeat
             padding-box;
-          padding: 0.75em 1.25em 0.75em 0.75em;
+          padding: 0.75em 1.25em 0.75em 1.75em;
           display: flex;
           align-items: center;
           justify-content: flex-start;
           &:hover {
             text-decoration: none;
             .arrow_icon {
-              right: 0.5em;
+              right: 1em;
             }
           }
           .arrow_icon {
             @include arrowStyle;
             max-width: 1.5em;
-            right: 1em;
+            right: 1.5em;
           }
         }
       }

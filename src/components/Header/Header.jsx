@@ -104,7 +104,7 @@ const Header = () => {
             <a href={homeURL}>
               <img
                 className={nav.class}
-                src={`${isBg ? logoblack : logocolor}`}
+                src={logocolor}
                 alt="talha logo"
                 onClick={scrollHandler}
               />
@@ -124,14 +124,14 @@ const Header = () => {
               <div className="navlinks">
                 <ul>
                   {navlinkList}
-                  <li className="book_your_space animate__animated animate__flash animate__infinite	infinite animate__slower">
+                  <li className="book_your_space animate__animated animate__flash	infinite animate__slower">
                     <a
                       href="mailto:talhaasre.dev@gmail.com?Subject=Let's%20have%20a%20meet"
                       className="flex_for_ticker"
                       // target="_blank"
                       // rel="noreferrer"
                     >
-                      Get in Touch
+                      Say Hello
                       <img
                         className="arrow_icon arrow_icon_1"
                         src={whitearrow}
@@ -151,7 +151,7 @@ const Header = () => {
                 <div className="logo_wrapper">
                   <Link className="logo_link" to="/">
                     <img
-                      src={`${isBg ? logoblack : logocolor}`}
+                      src={logocolor}
                       alt="talha logo"
                       className="talha_logo"
                     />
