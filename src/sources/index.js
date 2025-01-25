@@ -11,6 +11,7 @@ export { default as footerlocation } from "./images/general/footer-location-icon
 export { default as footermail } from "./images/general/footer-mail-icon.svg";
 export { default as footercall } from "./images/general/footer-phone-call-icon.svg";
 export { default as herodevices } from "./images/homepage/hero-devices.svg";
+export { default as herodevices02 } from "./images/homepage/hero-devices-02.svg";
 export { default as frontend } from "./images/homepage/frontend.svg";
 export { default as backend } from "./images/homepage/backend.svg";
 export { default as tools } from "./images/homepage/tools.svg";
@@ -38,5 +39,9 @@ export let images = {
   logo: {
     image: require("./images/general/talha-logo.png"),
     alt: "Talha Asre Logo",
+  },
+  talhaasre: {
+    image: require("./images/homepage/talha-asre.JPG"),
+    alt: "Talha Asre",
   },
 };

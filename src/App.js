@@ -3,6 +3,13 @@ import Routing from "./Routing";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import MetaDecorator from "./components/MetaDecorator/MetaDecorator";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/autoplay";
+import "swiper/css/effect-fade";
+import "swiper/css/pagination";
+
 function App() {
   return (
     <>

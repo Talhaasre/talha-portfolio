@@ -1,0 +1,13 @@
+@import "../../common.scss";
+
+.home_v2_sec1 {
+  padding: 10.688em 0;
+  min-height: 100vh;
+  overflow: hidden;
+  .profile_picture {
+    width: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+  }
+}
